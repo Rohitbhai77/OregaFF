@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROHIT KI SITE</title>
+    
+    <!-- Add Favicon here -->
+    <link rel="icon" href="C:\Users\DELL\Documents\android-chrome-192x192.png" type="image/x-icon">
+    <!-- You can also use PNG or other formats, e.g. favicon.png -->
+    <!-- <link rel="icon" href="favicon.png" type="png"> -->
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0, #2193b0, #6dd5ed, #cc2b5e, #753a88);
+            background-size: 600% 400%;
+            animation: gradientBackground 5s ease infinite;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            
+
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 30%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Marquee Text with Effects */
+        .marquee-container {
+            width: 100%;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(90deg, #ff0000, #ff7300, #ffd900, #32cd32, #1e90ff, #4b0082, #ff0000);
+            animation: colorChange 5s infinite alternate;
+            color: white;
+            margin-bottom: 40px; /* Added space between marquee and buttons */
+        }
+
+        @keyframes colorChange {
+            0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff7300; }
+            50% { text-shadow: 0 0 10px #fff, 0 0 20px #1e90ff, 0 0 30px #32cd32; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff7300; }
+        }
+
+        /* Common Button Styling */
+        .social-btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 10);
+            text-decoration: none; /* Remove underline */
+        }
+
+        .social-btn i {
+            font-size: 25px;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0PX 10PX 35PX greenyellow;
+        }
+
+        /* Layout for Buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            flex-wrap: wrap;
+            margin-top: 40px;
+
+        }
+            .button-container A {
+                text-decoration: NONE;
+            }
+
+
+        .COPY{
+            padding: 20PX;
+            position: absolute;
+            bottom: 0PX;
+            height: 30PX;
+            width: 100%;
+            display: inline-block;
+            right: 0PX;
+            background-color: black;
+            color: white;
+            text-decoration: NONE;
+        }
+
+        .youtube-btn { background-color: #ff0000; }
+        .facebook-btn { background-color: #3b5998; }
+        .instagram-btn { background-color: #e1306c; }
+        .twitter-btn { background-color: #1da1f2; }
+        .tiktok-btn { background-color: #000000; }
+        .netflix-btn { background-color: #e50914; }
+        .login-btn { background-color: darkred; } 
+        .WhatsApp-btn {background-color: #25D366;}/* Green button for Login */
+
+
+        /* Responsive Button Layout */
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        /* Footer Styling */
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: WHITE;
+        }
+        IMG{
+            height: 10PX;
+            width: 25PX;
+            position: absolute;
+            LEFT: 20PX;
+            top: 100PX;
+            border: 5PX darkgoldenrod;
+        }
+
+        IMG:HOVER{
+            height: 420PX;
+            width: 470PX;
+            box-shadow: 0PX 0PX 20PX RED;
+        }
+        #DOREAMON{
+            margin: 100PX;
+            position: absolute;
+            left: -80PX;
+        }
+        .video{height: 10PX;
+            width: 25PX;
+            position: absolute;
+            right: 20PX;
+            top: 100PX;
+
+        }
+
+        .LOGIN{
+            position: absolute;
+            right: 30PX;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Marquee Section -->
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="right" scrollamount="10">
+            🚀 This is our Official Site so don’t fear it! Stay Secure & Trust Us ✅
+        </marquee>
+    </div>
+
+    <!-- Social Media Buttons -->
+    <div class="button-container">
+        <a href="https://www.youtube.com/" target="_blank">
+            <button class="social-btn youtube-btn">
+                <i class="fab fa-youtube"></i>
+                YouTube
+            </button>
+        </a>
+
+        <a href="https://www.facebook.com/" target="_blank">
+            <button class="social-btn facebook-btn">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </button>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+            <button class="social-btn instagram-btn">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </button>
+
+        <a href="https://www.WhatsApp.com/" target="_blank">
+            <button class="social-btn WhatsApp-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                Whats app
+            </button>
+        </a>
+
+        <a href="https://twitter.com/" target="_blank">
+            <button class="social-btn twitter-btn">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </button>
+        </a>
+
+        <a href="https://www.tiktok.com/" target="_blank">
+            <button class="social-btn tiktok-btn">
+                <i class="fab fa-tiktok"></i>
+                TikTok
+            </button>
+        </a>
+
+        <a href="https://www.pinterest.com/" target="_blank">
+            <button class="social-btn ">
+                <i class="fa-brands fa-pinterest"></i>
+                Printrest
+            </button>
+        </a>
+
+        <a href="C:\Users\DELL\Documents\WhatsApp Image 2025-01-20 at 3.39.16 PM.jpeg" target="_blank">
+            <button class="social-btn 0">
+                <i class="fa-solid fa-image"></i>
+                OWNER OF SITE
+            </button>
+        </a>
+
+        
+        <!-- Login Button -->
+        <a CLASS="LOGIN" href="C:\Users\DELL\Desktop\CODDING\LOGIN.HTML.html"> <!-- You can link it to your login page -->
+            <button class="social-btn login-btn">
+                <i class="fa-solid fa-user"></i>
+                Login
+            </button>
+        </a>
+    </div>
+    <img ID="DOREAMON" src="C:\Users\DELL\Desktop\CODDING\WhatsApp Image 2025-02-19 at 12.37.34 PM.png">
+    <img src="D:\6d1ec9d6-afb1-4a11-acb4-150755ffb929.jpeg">
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <A href class="COPY">© All rights reserved 2005-2025, ROHIT KI SITE</A> 
+
+    </div>
+    <iframe width="420" height="315" name="video"></iframe>
+                                                            
+                    <a href="https://www.youtube.com/embed/tgbNymZ7vqY" target="video">Video</a>
+
+</body>
+</html>

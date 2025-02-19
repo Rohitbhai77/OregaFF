@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN Form</title>
+    <style>
+        /* Animated Gradient Background */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ff9a9e);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 50px auto;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Buttons */
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .captcha-container, .otp-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .captcha-box {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .refresh-captcha, .send-otp {
+            cursor: pointer;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .refresh-captcha:hover, .send-otp:hover {
+            background: #1976D2;
+            transform: scale(1.05);
+        }
+
+        /* Shake Effect */
+        .shake {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+
+        /* Success Message */
+        #success-message {
+            display: none;
+            text-align: center;
+            background: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #CANCEL{
+            height: 50PX;
+            width: 50PX;
+            border: 1PX SOLID black;
+            font-size: 50PX;
+            text-align: center;
+            position: absolute;
+            right: 0PX;
+            top: 0PX;
+            border-top-right-radius: 5PX;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <A HREF="INDEX.HTML.HTML"><i id="CANCEL" class="fa-solid fa-xmark"></i></A>
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="otp-container">
+                    <input type="tel" id="phone" name="phone" required>
+                    <button type="button" class="send-otp" onclick="generateOTP()">Send OTP</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="otp">Enter OTP</label>
+                <input type="text" id="otp" name="otp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="captcha">Enter CAPTCHA</label>
+                <div class="captcha-container">
+                    <div id="captchaBox" class="captcha-box"></div>
+                    <button type="button" class="refresh-captcha" onclick="generateCaptcha()">Refresh</button>
+                </div>
+                <input type="text" id="captcha" name="captcha" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div id="success-message">Your Data has been successfully submitted!</div>
+        
+    </div>
+
+    <script>
+        let generatedOTP = "";
+        let generatedCaptcha = "";
+
+        function generateOTP() {
+            generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+            alert("Your OTP is: " + generatedOTP);
+        }
+
+        function generateCaptcha() {
+            generatedCaptcha = Math.random().toString(36).substring(2, 8).toUpperCase();
+            document.getElementById("captchaBox").innerText = generatedCaptcha;
+        }
+
+        window.onload = generateCaptcha;
+
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let enteredOTP = document.getElementById("otp").value;
+            let enteredCaptcha = document.getElementById("captcha").value;
+
+            if (enteredOTP !== generatedOTP) {
+                alert("Incorrect OTP!");
+                return;
+            }
+
+            if (enteredCaptcha !== generatedCaptcha) {
+                alert("Incorrect CAPTCHA!");
+                return;
+            }
+
+            document.getElementById("success-message").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
